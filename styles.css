@@ -1,0 +1,71 @@
+/* Reset básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Aplica a fonte Roboto a todo o corpo */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Aplica a fonte Roboto ao cabeçalho */
+}
+
+main {
+    padding: 20px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    max-width: 1250px; /* Limita a largura máxima da imagem */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se o espaço for insuficiente */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+.gallery-item {
+    flex: 1 1 300px; /* Faz com que os itens tenham uma largura mínima e cresçam se houver espaço */
+    max-width: 500px; /* Define uma largura máxima para os itens */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.gallery-item h2 {
+    font-family: 'Roboto', sans-serif; /* Aplica a fonte Roboto aos nomes dos jogos */
+    font-weight: 700; /* Aplica um peso mais forte à fonte para os nomes dos jogos */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}

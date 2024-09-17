@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site de Jogos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        /* Estilo adicional para o overlay */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            font-family: 'Roboto', sans-serif;
+        }
+        .overlay.active {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Trash Games</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <!-- Substitua pelo URL ou caminho local da sua imagem -->
+            <img src="imagens/imagem-grande.jpg" alt="Imagem Grande de Jogo" class="hero-image">
+        </section>
+        <section class="gallery">
+            <div class="gallery-item" id="jogo1">
+                <!-- Substitua pelo URL ou caminho local da sua imagem -->
+                <img src="imagens/jogo1.jpg" alt="Jogo 1">
+                <h2>Sky Wings</h2>
+                <p>Um jogo de Aeronaves no qual e mundo livre e com aeroportos / o jogo ainda estar em alpha.</p>
+            </div>
+            <div class="gallery-item">
+                <!-- Substitua pelo URL ou caminho local da sua imagem -->
+                <img src="imagens/jogo2.jpg" alt="Jogo 2">
+                <h2>Jogo 2</h2>
+                <p>Descrição do Jogo 2.</p>
+            </div>
+            <div class="gallery-item">
+                <!-- Substitua pelo URL ou caminho local da sua imagem -->
+                <img src="imagens/jogo3.jpg" alt="Jogo 3">
+                <h2>Jogo 3</h2>
+                <p>Descrição do Jogo 3.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Meu Site de Jogos. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Overlay para a mensagem -->
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <p>Este Jogo estar Em Alpha.</p>
+            <button id="close-overlay">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        // Seleciona o item do jogo e o overlay
+        const jogo1 = document.getElementById('jogo1');
+        const overlay = document.getElementById('overlay');
+        const closeOverlay = document.getElementById('close-overlay');
+
+        // Adiciona um evento de clique ao item do jogo
+        jogo1.addEventListener('click', () => {
+            overlay.classList.add('active');
+        });
+
+        // Adiciona um evento de clique ao botão de fechar
+        closeOverlay.addEventListener('click', () => {
+            overlay.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
